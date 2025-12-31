@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamHub</title>
+    <style>
+        :root {
+            --bg-color: #141414;
+            --text-color: #ffffff;
+            --primary-red: #e50914;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            color: var(--primary-red);
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), var(--bg-color)), url('https://via.placeholder.com/1920x1080/222/fff?text=Featured+Content') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+        }
+        .hero h1 { font-size: 4rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; }
+        .btn {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 10px 24px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .container { padding: 40px; }
+        .section-title { font-size: 1.5rem; margin-bottom: 20px; font-weight: 500; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #1f1f1f;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover { transform: scale(1.1); z-index: 10; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .card img { width: 100%; height: 150px; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .card h3 { margin: 0 0 5px; font-size: 1.1rem; }
+        .card p { margin: 0; color: #aaa; font-size: 0.9rem; }
+        .rating { color: #46d369; font-weight: bold; font-size: 0.9rem; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">StreamHub</div>
+        <div style="font-weight: bold;">Login</div>
+    </header>
+    
+    <div class="hero">
+        <h1>Unlimited Movies</h1>
+        <p>Watch anywhere. Cancel anytime. The best secure streaming experience powered by DevSecOps.</p>
+        <button class="btn">Play Now</button>
+    </div>
+
+    <div class="container">
+        <div class="section-title">Trending Now</div>
+        <div class="grid" id="movie-grid">
+            <!-- Movies will be injected here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
