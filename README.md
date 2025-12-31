@@ -17,7 +17,7 @@ This project demonstrates a complete DevSecOps workflow:
 ### Step 1: Clone the Code
 Clone this repository to your instance:
 ```bash
-git clone https://github.com/your-username/TaskFlow.git
+git clone https://github.com/sarika-03/TaskFlow.git
 cd TaskFlow
 ```
 
@@ -139,6 +139,7 @@ For production deployment:
 2.  Install **ArgoCD**.
 3.  Create an ArgoCD App pointing to the `Kubernetes/` folder in this repo.
 4.  ArgoCD will sync and deploy `deployment.yml` and `service.yml`.
+
 
 ---
 
