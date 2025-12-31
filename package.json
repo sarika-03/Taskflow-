@@ -1,0 +1,11 @@
+{
+  "name": "taskflow-devsecops-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node backend/index.js",
+    "start:dev": "NODE_ENV=development node backend/index.js",
+    "start:backend": "npm --prefix backend ci && npm --prefix backend start",
+    "lint": "echo 'No lint configured'"
+  }
+}
