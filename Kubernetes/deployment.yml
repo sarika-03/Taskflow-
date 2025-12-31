@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskflow-app
+  labels:
+    app: taskflow-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: taskflow-app
+  template:
+    metadata:
+      labels:
+        app: taskflow-app
+    spec:
+      containers:
+      - name: taskflow-app
+        image: sarika1731/taskflow:latest
+        ports:
+        - containerPort: 3000
